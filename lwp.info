@@ -1,0 +1,14 @@
+name = Longwood Players
+description = Theme for the Longwood Players site
+core = 7.x
+engine = phptemplate
+
+stylesheets[all][] = "reset.css"
+stylesheets[all][] = "layout.css"
+
+regions[header] = Header
+regions[sidebar] = Sidebar
+regions[content] = Content
+regions[footer] = Footer
+
+

@@ -1,0 +1,179 @@
+$page_width: 853px;
+$sidebar_width: 150px;
+
+$background_color: rgb(51,0,102);
+$text_color: white;
+
+body {
+    background: $background_color;
+    color: $text_color;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+}
+
+/**
+ * center the page and make it the width of the banner.
+ * @TODO can we change the banner? Make it a better width?
+ */
+#page {
+    width: $page_width;
+    margin: auto;
+}
+
+/**
+ * This uses the "Holy Grail" style layout adapted for one sidebar.
+ * See: http://www.alistapart.com/articles/holygrail
+ */
+#main-wrapper {
+    padding-left: $sidebar_width;
+
+    .column {
+        position: relative;
+        float: left;
+    }
+
+    #content {
+        width: 100%;
+    }
+
+    #sidebar {
+        width: $sidebar_width;
+        right: $sidebar_width;
+        margin-left: -100%;
+    }
+}
+
+/**
+ * style the tabs
+ */
+div.tabs {
+    font-size: 0.7em;
+
+    ul.tabs {
+        border-top: thin solid yellow;
+        border-bottom: thin solid yellow;
+        background: yellow;
+        margin: 0;
+
+        li {
+            border: none;
+
+            &.active {
+                background: white;
+            }
+
+            a {
+                background: inherit;
+                color: black;
+                border: none;
+            }
+        }
+    }
+}
+
+/**
+ * Make the title happy
+ */
+div#content-radius-title {
+    h1#page-title {
+        font-size: 3em;
+        padding-left: 30px;
+        margin-bottom: -5px;
+    }
+}
+
+div#content-radius {
+    border-top: thin solid yellow;
+    border-left: thin solid yellow;
+    -webkit-border-top-left-radius: 30px;
+    -khtml-border-radius-topleft: 30px;
+    -moz-border-radius-topleft: 30px;
+    border-top-left-radius: 30px;
+    padding: 1em;
+}
+
+/**
+ * sidebar menus
+ */
+div#sidebar div.block {
+    font-size: 0.8em;
+    margin-bottom: 2em;
+
+    h2 {
+        color: black;
+        background: yellow;
+        margin-bottom: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        -webkit-border-top-right-radius: 20px;
+        -khtml-border-radius-topright: 20px;
+        -moz-border-radius-topright: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    div.content {
+        color: yellow;
+        background: #330066;
+
+        li {
+            border-bottom: thin solid yellow;
+            margin: 0;
+            padding: 0;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            list-style-type: none;
+            list-style-image: none;
+
+            a {
+                color: inherit;
+                margin: 0;
+                padding: 0;
+                text-decoration: none;
+
+                &:hover {
+                    color: #330066;
+                    background: yellow;
+                }
+            }
+        }
+    }
+}
+
+/**
+ * scootch the body content a bit over
+ */
+div#content-section-id {
+    padding-left: 1em;
+
+    div#content-actually {
+        p {
+            margin: 0;
+            padding: 0;
+            margin-bottom: 1em;
+            padding-top: 0.5em;
+            padding-top: 0.5em;
+            line-height: 1.2em;
+        }
+
+        a {
+            color: yellow;
+
+            &:active {
+                color: white;
+            }
+            &:hover {
+                color: white;
+            }
+        }
+
+        em {
+            color: yellow;
+            font-style: normal;
+        }
+
+        ol {
+            list-style: decimal inside;
+        }
+    }
+}

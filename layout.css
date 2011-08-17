@@ -1,0 +1,126 @@
+body {
+  background: #330066;
+  color: white;
+  font-family: Verdana, Helvetica, Arial, sans-serif; }
+
+/**
+ * center the page and make it the width of the banner.
+ * @TODO can we change the banner? Make it a better width?
+ */
+#page {
+  width: 853px;
+  margin: auto; }
+
+/**
+ * This uses the "Holy Grail" style layout adapted for one sidebar.
+ * See: http://www.alistapart.com/articles/holygrail
+ */
+#main-wrapper {
+  padding-left: 150px; }
+  #main-wrapper .column {
+    position: relative;
+    float: left; }
+  #main-wrapper #content {
+    width: 100%; }
+  #main-wrapper #sidebar {
+    width: 150px;
+    right: 150px;
+    margin-left: -100%; }
+
+/**
+ * style the tabs
+ */
+div.tabs {
+  font-size: 0.7em; }
+  div.tabs ul.tabs {
+    border-top: thin solid yellow;
+    border-bottom: thin solid yellow;
+    background: yellow;
+    margin: 0; }
+    div.tabs ul.tabs li {
+      border: none; }
+      div.tabs ul.tabs li.active {
+        background: white; }
+      div.tabs ul.tabs li a {
+        background: inherit;
+        color: black;
+        border: none; }
+
+/**
+ * Make the title happy
+ */
+div#content-radius-title h1#page-title {
+  font-size: 3em;
+  padding-left: 30px;
+  margin-bottom: -5px; }
+
+div#content-radius {
+  border-top: thin solid yellow;
+  border-left: thin solid yellow;
+  -webkit-border-top-left-radius: 30px;
+  -khtml-border-radius-topleft: 30px;
+  -moz-border-radius-topleft: 30px;
+  border-top-left-radius: 30px;
+  padding: 1em; }
+
+/**
+ * sidebar menus
+ */
+div#sidebar div.block {
+  font-size: 0.8em;
+  margin-bottom: 2em; }
+  div#sidebar div.block h2 {
+    color: black;
+    background: yellow;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    -webkit-border-top-right-radius: 20px;
+    -khtml-border-radius-topright: 20px;
+    -moz-border-radius-topright: 20px;
+    border-top-right-radius: 20px; }
+  div#sidebar div.block div.content {
+    color: yellow;
+    background: #330066; }
+    div#sidebar div.block div.content li {
+      border-bottom: thin solid yellow;
+      margin: 0;
+      padding: 0;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 10px;
+      list-style-type: none;
+      list-style-image: none; }
+      div#sidebar div.block div.content li a {
+        color: inherit;
+        margin: 0;
+        padding: 0;
+        text-decoration: none; }
+        div#sidebar div.block div.content li a:hover {
+          color: #330066;
+          background: yellow; }
+
+/**
+ * scootch the body content a bit over
+ */
+div#content-section-id {
+  padding-left: 1em; }
+  div#content-section-id div#content-actually p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1em;
+    padding-top: 0.5em;
+    padding-top: 0.5em;
+    line-height: 1.2em; }
+  div#content-section-id div#content-actually a {
+    color: yellow; }
+    div#content-section-id div#content-actually a:active {
+      color: white; }
+    div#content-section-id div#content-actually a:hover {
+      color: white; }
+  div#content-section-id div#content-actually em {
+    color: yellow;
+    font-style: normal; }
+  div#content-section-id div#content-actually ol {
+    list-style: decimal inside; }
