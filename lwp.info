@@ -3,7 +3,6 @@ description = Theme for the Longwood Players site
 core = 7.x
 engine = phptemplate
 
-stylesheets[all][] = "reset.css"
 stylesheets[all][] = "layout.css"
 
 regions[header] = Header

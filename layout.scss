@@ -4,10 +4,23 @@ $sidebar_width: 150px;
 $background_color: rgb(51,0,102);
 $text_color: white;
 
+$content_radius: 30px;
+$menu_radius: 20px;
+$menu_left_padding: 10px;
+
+
+body, div, span, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+
 body {
     background: $background_color;
     color: $text_color;
     font-family: Verdana, Helvetica, Arial, sans-serif;
+    line-height: 1;
 }
 
 /**
@@ -49,10 +62,10 @@ div.tabs {
     font-size: 0.7em;
 
     ul.tabs {
+        margin: 0;
         border-top: thin solid yellow;
         border-bottom: thin solid yellow;
         background: yellow;
-        margin: 0;
 
         li {
             border: none;
@@ -62,9 +75,9 @@ div.tabs {
             }
 
             a {
+                border: none;
                 background: inherit;
                 color: black;
-                border: none;
             }
         }
     }
@@ -75,65 +88,74 @@ div.tabs {
  */
 div#content-radius-title {
     h1#page-title {
-        font-size: 3em;
-        padding-left: 30px;
         margin-bottom: -5px;
+        padding-left: $content_radius;
+        font-size: 3em;
     }
 }
 
 div#content-radius {
+    padding: 1em;
     border-top: thin solid yellow;
     border-left: thin solid yellow;
-    -webkit-border-top-left-radius: 30px;
-    -khtml-border-radius-topleft: 30px;
-    -moz-border-radius-topleft: 30px;
-    border-top-left-radius: 30px;
-    padding: 1em;
+    -webkit-border-top-left-radius: $content_radius;
+    -khtml-border-radius-topleft: $content_radius;
+    -moz-border-radius-topleft: $content_radius;
+    border-top-left-radius: $content_radius;
 }
 
 /**
  * sidebar menus
  */
 div#sidebar div.block {
-    font-size: 0.8em;
     margin-bottom: 2em;
+    font-size: 0.8em;
 
     h2 {
-        color: black;
-        background: yellow;
         margin-bottom: 5px;
         padding-top: 10px;
         padding-bottom: 10px;
-        padding-left: 10px;
-        -webkit-border-top-right-radius: 20px;
-        -khtml-border-radius-topright: 20px;
-        -moz-border-radius-topright: 20px;
-        border-top-right-radius: 20px;
+        padding-left: $menu_left_padding;
+        -webkit-border-top-right-radius: $menu_radius;
+        -khtml-border-radius-topright: $menu_radius;
+        -moz-border-radius-topright: $menu_radius;
+        border-top-right-radius: $menu_radius;
+        color: black;
+        background: yellow;
+        font-size: 1em;
+        line-height: 1.2em;
     }
 
     div.content {
         color: yellow;
         background: #330066;
 
-        li {
-            border-bottom: thin solid yellow;
+        ul {
             margin: 0;
             padding: 0;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            padding-left: 10px;
-            list-style-type: none;
-            list-style-image: none;
 
-            a {
-                color: inherit;
+            li {
+                border-bottom: thin solid yellow;
                 margin: 0;
                 padding: 0;
-                text-decoration: none;
+                list-style-type: none;
+                list-style-image: none;
 
-                &:hover {
-                    color: #330066;
-                    background: yellow;
+                a {
+                    display: block;
+                    color: inherit;
+                    margin: 0;
+                    padding: 0;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    padding-left: $menu_left_padding;
+                    text-decoration: none;
+                    line-height: 1;
+
+                    &:hover {
+                        color: #330066;
+                        background: yellow;
+                    }
                 }
             }
         }
@@ -177,3 +199,37 @@ div#content-section-id {
         }
     }
 }
+
+/**
+ * Make some views look better
+ */
+div#content-actually {
+    div.view-executive-board-members {
+        table {
+            border-spacing: none;
+            border: none;
+
+            thead {
+                th {
+                    border: none;
+                }
+            }
+
+            tbody {
+                border: none;
+                vertical-align: top;
+
+                tr.even, tr.odd {
+                    background: none;
+                    border: none;
+
+                    td {
+                        padding-left: 1em;
+                        margin-bottom: 2em;
+                    }
+                }
+            }
+        }
+    }
+}
+

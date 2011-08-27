@@ -1,7 +1,13 @@
+body, div, span, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  border: none; }
+
 body {
   background: #330066;
   color: white;
-  font-family: Verdana, Helvetica, Arial, sans-serif; }
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  line-height: 1; }
 
 /**
  * center the page and make it the width of the banner.
@@ -33,45 +39,43 @@ body {
 div.tabs {
   font-size: 0.7em; }
   div.tabs ul.tabs {
+    margin: 0;
     border-top: thin solid yellow;
     border-bottom: thin solid yellow;
-    background: yellow;
-    margin: 0; }
+    background: yellow; }
     div.tabs ul.tabs li {
       border: none; }
       div.tabs ul.tabs li.active {
         background: white; }
       div.tabs ul.tabs li a {
+        border: none;
         background: inherit;
-        color: black;
-        border: none; }
+        color: black; }
 
 /**
  * Make the title happy
  */
 div#content-radius-title h1#page-title {
-  font-size: 3em;
+  margin-bottom: -5px;
   padding-left: 30px;
-  margin-bottom: -5px; }
+  font-size: 3em; }
 
 div#content-radius {
+  padding: 1em;
   border-top: thin solid yellow;
   border-left: thin solid yellow;
   -webkit-border-top-left-radius: 30px;
   -khtml-border-radius-topleft: 30px;
   -moz-border-radius-topleft: 30px;
-  border-top-left-radius: 30px;
-  padding: 1em; }
+  border-top-left-radius: 30px; }
 
 /**
  * sidebar menus
  */
 div#sidebar div.block {
-  font-size: 0.8em;
-  margin-bottom: 2em; }
+  margin-bottom: 2em;
+  font-size: 0.8em; }
   div#sidebar div.block h2 {
-    color: black;
-    background: yellow;
     margin-bottom: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -79,27 +83,36 @@ div#sidebar div.block {
     -webkit-border-top-right-radius: 20px;
     -khtml-border-radius-topright: 20px;
     -moz-border-radius-topright: 20px;
-    border-top-right-radius: 20px; }
+    border-top-right-radius: 20px;
+    color: black;
+    background: yellow;
+    font-size: 1em;
+    line-height: 1.2em; }
   div#sidebar div.block div.content {
     color: yellow;
     background: #330066; }
-    div#sidebar div.block div.content li {
-      border-bottom: thin solid yellow;
+    div#sidebar div.block div.content ul {
       margin: 0;
-      padding: 0;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      padding-left: 10px;
-      list-style-type: none;
-      list-style-image: none; }
-      div#sidebar div.block div.content li a {
-        color: inherit;
+      padding: 0; }
+      div#sidebar div.block div.content ul li {
+        border-bottom: thin solid yellow;
         margin: 0;
         padding: 0;
-        text-decoration: none; }
-        div#sidebar div.block div.content li a:hover {
-          color: #330066;
-          background: yellow; }
+        list-style-type: none;
+        list-style-image: none; }
+        div#sidebar div.block div.content ul li a {
+          display: block;
+          color: inherit;
+          margin: 0;
+          padding: 0;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          padding-left: 10px;
+          text-decoration: none;
+          line-height: 1; }
+          div#sidebar div.block div.content ul li a:hover {
+            color: #330066;
+            background: yellow; }
 
 /**
  * scootch the body content a bit over
@@ -124,3 +137,21 @@ div#content-section-id {
     font-style: normal; }
   div#content-section-id div#content-actually ol {
     list-style: decimal inside; }
+
+/**
+ * Make some views look better
+ */
+div#content-actually div.view-executive-board-members table {
+  border-spacing: none;
+  border: none; }
+  div#content-actually div.view-executive-board-members table thead th {
+    border: none; }
+  div#content-actually div.view-executive-board-members table tbody {
+    border: none;
+    vertical-align: top; }
+    div#content-actually div.view-executive-board-members table tbody tr.even, div#content-actually div.view-executive-board-members table tbody tr.odd {
+      background: none;
+      border: none; }
+      div#content-actually div.view-executive-board-members table tbody tr.even td, div#content-actually div.view-executive-board-members table tbody tr.odd td {
+        padding-left: 1em;
+        margin-bottom: 2em; }
