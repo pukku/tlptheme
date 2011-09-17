@@ -233,3 +233,38 @@ div#content-actually {
     }
 }
 
+/**
+ * Fix arbitrary pair lists
+ */
+div#content-section-id div#content-actually ul.lwp-arb-pair-list {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+        border-bottom: 2pt dotted $text_color;
+        margin-top: 0.25em;
+        clear: both;
+
+        p {
+            margin: 0;
+            padding: 0;
+            line-height: 1.2em;
+            background-color: $background_color;
+            position: relative;
+            top: 2pt;
+
+            &.lwp-arb-pair-left {
+                float: left;
+                text-align: left;
+                padding-right: 0.25em;
+            }
+
+            &.lwp-arb-pair-right {
+                float: right;
+                text-align: right;
+                padding-left: 0.25em;
+            }
+        }
+    }
+}

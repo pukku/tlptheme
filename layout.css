@@ -155,3 +155,30 @@ div#content-actually div.view-executive-board-members table {
       div#content-actually div.view-executive-board-members table tbody tr.even td, div#content-actually div.view-executive-board-members table tbody tr.odd td {
         padding-left: 1em;
         margin-bottom: 2em; }
+
+/**
+ * Fix arbitrary pair lists
+ */
+div#content-section-id div#content-actually ul.lwp-arb-pair-list {
+  margin: 0;
+  padding: 0; }
+  div#content-section-id div#content-actually ul.lwp-arb-pair-list li {
+    list-style: none;
+    border-bottom: 2pt dotted white;
+    margin-top: 0.25em;
+    clear: both; }
+    div#content-section-id div#content-actually ul.lwp-arb-pair-list li p {
+      margin: 0;
+      padding: 0;
+      line-height: 1.2em;
+      background-color: #330066;
+      position: relative;
+      top: 2pt; }
+      div#content-section-id div#content-actually ul.lwp-arb-pair-list li p.lwp-arb-pair-left {
+        float: left;
+        text-align: left;
+        padding-right: 0.25em; }
+      div#content-section-id div#content-actually ul.lwp-arb-pair-list li p.lwp-arb-pair-right {
+        float: right;
+        text-align: right;
+        padding-left: 0.25em; }
