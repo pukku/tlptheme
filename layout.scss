@@ -236,7 +236,7 @@ div#content-actually {
 /**
  * Fix arbitrary pair lists
  */
-div#content-section-id div#content-actually ul.lwp-arb-pair-list {
+div#content-section-id div#content-actually ul.tlptheme-tlppair-list {
     margin: 0;
     padding: 0;
 
@@ -254,13 +254,13 @@ div#content-section-id div#content-actually ul.lwp-arb-pair-list {
             position: relative;
             top: 2pt;
 
-            &.lwp-arb-pair-left {
+            &.tlptheme-tlppair-left {
                 float: left;
                 text-align: left;
                 padding-right: 0.25em;
             }
 
-            &.lwp-arb-pair-right {
+            &.tlptheme-tlppair-right {
                 float: right;
                 text-align: right;
                 padding-left: 0.25em;

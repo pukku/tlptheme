@@ -9,5 +9,3 @@ regions[header] = Header
 regions[sidebar] = Sidebar
 regions[content] = Content
 regions[footer] = Footer
-
-

@@ -3,10 +3,10 @@
 /**
  * Implements hook_preprocess_html().
  */
-function lwp_preprocess_html (&$variables) {
+function tlptheme_preprocess_html (&$variables) {
   /* add the reset.css file before any system css files. */
   /* see: http://fourkitchens.com/blog/2010/11/12/promiscuous-stylesheets-drupal-7 */
-/*  $reset = drupal_get_path('theme', 'lwp') . '/reset.css';
+/*  $reset = drupal_get_path('theme', 'tlptheme') . '/reset.css';
 
   $options = array(
     'group'  => CSS_SYSTEM - 1, // this is an implementation hack
@@ -16,15 +16,15 @@ function lwp_preprocess_html (&$variables) {
 drupal_add_css($reset, $options); */
 }
 
-function lwp_arb_pair_display ($variables) {
+function tlptheme_tlppair_display ($variables) {
   $output = '';
 
-  $output .= '<ul class="lwp-arb-pair-list">';
+  $output .= '<ul class="tlptheme-tlppair-list">';
 
   foreach ($variables['items'] as $r) {
     $output .= '<li> &nbsp; '; // the &nbsp; makes the li be the correct height
-    $output .= '<p class="lwp-arb-pair-left">'  . $r['arb_pair_val_1'] . '</p>';
-    $output .= '<p class="lwp-arb-pair-right">' . $r['arb_pair_val_2'] . '</p>';
+    $output .= '<p class="tlptheme-tlppair-left">'  . $r['tlppair_val_1'] . '</p>';
+    $output .= '<p class="tlptheme-tlppair-right">' . $r['tlppair_val_2'] . '</p>';
     $output .= '</li>' . "\n";
   }
 
